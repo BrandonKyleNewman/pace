@@ -33,48 +33,6 @@
         },
       };
     </script>
-    <style>
-      /* Float + Dynamic Shadow */
-      .can-float {
-        animation: float 3s ease-in-out infinite;
-        filter: drop-shadow(0 12px 40px rgba(0, 0, 0, 0.4));
-      }
-
-      .shadow-blob {
-        position: absolute;
-        bottom: 0;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 60%;
-        height: 20px;
-        background: radial-gradient(ellipse, rgba(0, 0, 0, 0.35) 0%, transparent 70%);
-        border-radius: 50%;
-        animation: shadow-shrink 3s ease-in-out infinite;
-        z-index: 0;
-      }
-
-      @keyframes float {
-        0%,
-        100% {
-          transform: translateY(0);
-        }
-        50% {
-          transform: translateY(-14px);
-        }
-      }
-
-      @keyframes shadow-shrink {
-        0%,
-        100% {
-          transform: translateX(-50%) scaleX(1);
-          opacity: 0.7;
-        }
-        50% {
-          transform: translateX(-50%) scaleX(0.75);
-          opacity: 0.4;
-        }
-      }
-    </style>
     <!-- Meta Pixel Code -->
     <script>
       !(function (f, b, e, v, n, t, s) {
@@ -109,27 +67,26 @@
     <!-- HERO -->
     <main class="mx-auto px-6 pt-2 md:pt-4 pb-24 max-w-6xl">
       <div class="items-center gap-8 md:gap-12 grid md:grid-cols-2">
-        <!-- HEADLINE (order 1 on mobile, default on desktop) -->
+        <!-- HEADLINE -->
         <div class="order-1 md:order-1">
           <h1 class="mb-6 font-900 text-4xl sm:text-7xl leading-[0.95] tracking-tight">
             Electrolytes,
             <br />
             <span class="text-pace-yellow" style="font-style: italic">uninterrupted.</span>
           </h1>
-          <h1 class="mb-4 md:mb-1 font-900 text-pace-pinkHighlight text-2xl sm:text-3xl leading-[0.95] xl">A nicotine-free oral pouch for athletes who don't want to stop. Tuck between the lip and gum and get back to it.</h1>
+          <h2 class="mb-4 md:mb-1 font-900 text-pace-pinkHighlight text-2xl sm:text-3xl leading-[0.95]">A nicotine-free oral pouch for athletes who don't want to stop. Tuck between the lip and gum and get back to it.</h2>
         </div>
 
-        <!-- CAN IMAGE (order 2 on mobile, spans right column on desktop across both rows) -->
+        <!-- HERO IMAGE: flat lay photo -->
+        <!-- swap src to "pace-can.png" and add can-float class if you want to revert to the animated can -->
         <div class="flex justify-center md:justify-end order-2 md:order-2 md:row-span-2">
-          <div class="relative flex justify-center items-center w-full max-w-[260px] sm:max-w-[400px] h-[230px] sm:h-[400px]">
-            <img src="pace-can.png" alt="Pace electrolyte pouch can" class="z-10 can-float relative w-[85%] h-auto" />
-            <div class="shadow-blob"></div>
+          <div class="relative rounded-2xl w-full max-w-[480px] h-[320px] md:h-auto overflow-hidden">
+            <img src="img/court-flatlay.jpg" alt="Pace electrolyte pouch on a tennis racquet at the baseline" class="w-full h-full object-center object-cover" />
           </div>
         </div>
 
-        <!-- COPY + FORM (order 3 on mobile, sits under headline on desktop) -->
+        <!-- COPY + FORM -->
         <div class="flex flex-col order-3 md:order-3">
-          <!-- FORM: first on mobile, second on desktop -->
           <div class="order-1 md:order-2">
             <form action="https://gmail.us22.list-manage.com/subscribe/post?u=523f17cf832a08856c22c6097&amp;id=b4daa4d292&amp;f_id=009dc2e1f0" method="post" target="_self" class="flex sm:flex-row flex-col gap-3 mb-4 max-w-md">
               <input type="email" name="EMAIL" required placeholder="Your email" class="flex-1 bg-white/10 px-4 py-3 border border-white/20 focus:border-pace-yellow rounded-lg focus:outline-none focus:ring-1 focus:ring-pace-yellow text-white transition placeholder-white/40" />
@@ -137,7 +94,6 @@
             </form>
             <p class="mb-3 md:mb-4 max-w-lg text-pace-yellow text-base sm:text-xl leading-relaxed">Designed by a runner and tennis player who hated taking water breaks.</p>
           </div>
-          <!-- COPY: second on mobile, first on desktop -->
           <div class="order-2 md:order-1">
             <p class="mb-0 md:mb-8 max-w-lg text-white/70 text-base sm:text-xl leading-relaxed">You don't need to wait for a water break to stay hydrated. Place a Pace pouch between your lip and gum for hands-free hydration support during tennis, pickleball, running, you name it. No bottles, no mixing.</p>
           </div>
@@ -157,6 +113,34 @@
         <div>
           <h3 class="mb-2 font-700 text-pace-pinkHighlight text-lg sm:text-xl">Works with water</h3>
           <p class="text-white/50 text-base sm:text-lg leading-relaxed">Pace helps your body retain the water you're already drinking. Additive to your routine, not a replacement.</p>
+        </div>
+      </div>
+
+      <!-- FOUNDER SECTION -->
+      <div class="mt-16 md:mt-20 pt-12 md:pt-16 border-white/10 border-t">
+        <div class="items-center gap-10 md:gap-16 grid md:grid-cols-2">
+          <!-- PHOTO -->
+          <div class="order-2 md:order-1">
+            <div class="relative mx-auto md:mx-0 rounded-2xl max-w-sm overflow-hidden">
+              <img src="img/founder-court.jpg" alt="Pace founder on a tennis court holding a can" class="w-full h-auto object-cover" />
+            </div>
+          </div>
+
+          <!-- FOUNDER COPY -->
+          <div class="order-1 md:order-2">
+            <p class="mb-4 text-white/40 text-sm uppercase tracking-widest">Why Pace exists</p>
+            <h2 class="mb-6 font-800 text-3xl sm:text-4xl leading-tight">
+              I was running with
+              <span class="text-pace-yellow" style="font-style: italic">Zyns.</span>
+            </h2>
+            <p class="mb-6 text-white/70 text-base sm:text-lg leading-relaxed">Not because I wanted nicotine — because the pouch format made sense. Hands-free, no bottles, no stopping. I just wanted electrolytes instead.</p>
+            <p class="mb-8 text-white/70 text-base sm:text-lg leading-relaxed">Pace is what I built when I couldn't find it. Made in Queens. Pre-launch. Join the list and you'll be among the first to get it.</p>
+            <!-- Optional second CTA — remove if you'd rather keep a single form -->
+            <form action="https://gmail.us22.list-manage.com/subscribe/post?u=523f17cf832a08856c22c6097&amp;id=b4daa4d292&amp;f_id=009dc2e1f0" method="post" target="_self" class="flex sm:flex-row flex-col gap-3 max-w-md">
+              <input type="email" name="EMAIL" required placeholder="Your email" class="flex-1 bg-white/10 px-4 py-3 border border-white/20 focus:border-pace-yellow rounded-lg focus:outline-none focus:ring-1 focus:ring-pace-yellow text-white transition placeholder-white/40" />
+              <button type="submit" class="bg-pace-yellow hover:bg-pace-yellowLight px-6 py-3 rounded-lg font-700 text-navy-900 whitespace-nowrap transition">Get early access.</button>
+            </form>
+          </div>
         </div>
       </div>
     </main>
